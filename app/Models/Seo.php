@@ -9,7 +9,7 @@ class Seo extends Model
 {
     use HasFactory;
     protected $fillable = [
-            'notes',
+        'notes',
         'seotable_type',
         'seotable_id',
     ];

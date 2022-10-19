@@ -81,7 +81,7 @@ if (!function_exists('getSectionsix')) {
 if (!function_exists('getSectionseven')) {
     function getSectionseven()
     {
-        $Sectionseven = SectionSeven::whereNull('page_id')->inRandomOrder()->limit(2)->get();
+        $Sectionseven = SectionSeven::whereNull('page_id')->orderby('id','DESC')->limit(2)->get();
         return $Sectionseven;
     }
 }

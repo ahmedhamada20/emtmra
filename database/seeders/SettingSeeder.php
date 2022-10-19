@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Seo;
 use App\Models\Setting;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -25,6 +26,13 @@ class SettingSeeder extends Seeder
             'photo_navbar' => 'test',
             'photo_cover' => 'test',
             'photo_site' => 'test',
+        ]);
+
+
+        Seo::create([
+            'notes' => 'test',
+            'seotable_type' => 'App\Models\Setting',
+            'seotable_id' => 1,
         ]);
     }
 }

@@ -89,7 +89,7 @@ class NavbarController extends Controller
         if($request->file('photo')){
             $file= $request->file('photo');
             $filename= date('YmdHi').$file->getClientOriginalName();
-            $file-> move(public_path('admin/assets/'.$this->data['folderImage']), $filename);
+            $file->move(public_path('admin/assets/'.$this->data['folderImage']), $filename);
         }
 
         $data->update([
