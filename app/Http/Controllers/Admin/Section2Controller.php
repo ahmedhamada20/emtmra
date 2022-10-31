@@ -96,7 +96,7 @@ class Section2Controller extends Controller
         $data->update([
             'title' => ['ar' => $request->title ,'en' => $request->title_en],
             'notes' =>['ar'=> $request->notes,'en'=> $request->notes_en],
-            'cover_photo' => $filenamePage,
+            'cover_photo' => $filenamePage?? $data->cover_photo , 
         ]);
 
         return redirect()->back()->withMessage('تم التعديل  بنجاح', 'my msg');

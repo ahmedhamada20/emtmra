@@ -79,7 +79,7 @@ class RegisterController extends Controller
             ]);
 
             alert()->success('عمليه ناجحه', 'هل تم تسجيل البيانات من قبل وسيتم التواصل خلال الساعات القادمه');
-            return redirect()->route('website');
+            return redirect()->back();
         } else {
             Customer::create([
                 'name' => $request->name ?? null,
@@ -95,7 +95,7 @@ class RegisterController extends Controller
             ]);
 
             alert()->success('عمليه ناجحه', 'تم تسجيل بيانات بنجاح');
-            return redirect()->route('website');
+            return redirect()->back();
         }
 
 
